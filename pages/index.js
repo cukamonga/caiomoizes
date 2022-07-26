@@ -1,14 +1,9 @@
 import Link from 'next/link';
+import Header from '../src/header';
 
 function Home() {
     return (
-        <div>
-            <h1>Página Inicial</h1>
-
-            <Link href="/sobre">
-                <a>Acessar página Sobre</a>
-            </Link>
-        </div>
+        <Header />
     )
 }
 
