@@ -7,6 +7,7 @@
 
 body {
     min-height: 100vh;
+    background-color: #ebebeb !important;
 }
 
 a {
@@ -36,6 +37,7 @@ a {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 
 .topo {
@@ -121,4 +123,58 @@ span {
     color: #444243;
     position: absolute;
     top: 4px;
+}
+
+.container-fluid {
+    height: auto;
+    display: block;
+    position: relative;
+    top: 190px;
+    padding: 40px 100px;
+    text-align: center;
+}
+
+.container-fluid p {
+    font-family: 'Nexa';
+    max-width: 800px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.perfil {
+    display: flex;
+    /* border: 1px solid #000; */
+    width: auto;
+    padding: 0 100px;
+    height: 200px;
+    justify-content: center;
+}
+
+.foto {
+    height: 200px;
+    display: block;
+    width: 200px;
+    /* border: 2px solid #000; */
+}
+
+.foto img {
+    width: 100%;
+}
+
+.p-info {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.p-info h1 {
+    font-size: 32px !important;
+    border-bottom: 4px solid #ffca05;
+    margin-bottom: 10px !important;
+    display: inline-block !important;
+    height: auto !important;
+}
+
+.perfil span {
+    display: block;
+    max-width: 600px;
 }

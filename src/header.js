@@ -10,9 +10,10 @@ function Header() {
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Orçamento</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/portfolio">Portfólio</a></li>
+                    <li><a href="/orcamento">Orçamento</a></li>
+                    <li><a href="/contato">Contato</a></li>
                 </ul>
             </div>
         </div>
