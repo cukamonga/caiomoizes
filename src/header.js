@@ -6,7 +6,9 @@ function Header() {
                 <link rel="stylesheet" href="style.css" />
             </head>
             <body>
-                <div class="header"></div>
+                <div class="header">
+                    <p>Teste de texto.</p>
+                </div>
             </body>
         </html>
     );
