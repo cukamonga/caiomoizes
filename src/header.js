@@ -3,7 +3,7 @@ function Header() {
         <html>
             <head>
                 <title>Caio Moizés - Programador</title>
-                <link rel="stylesheet" href="./src/style.css" />
+                <link rel="stylesheet" href="../src/style.css" />
             </head>
             <body>
                 <div class="header">
