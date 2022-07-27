@@ -55,6 +55,15 @@ function Home() {
                             <div class="periodo">2019</div>
                         </div>
                     </div>
+                    <div class="container-pers1">
+                        <h1>Formação</h1>
+                        <div style={{clear: 'both'}}></div>
+                        <div class="col-pers1">
+                            <h3>Engenharia da Computação</h3>
+                            <span>UniSALESIANO Araçatuba-SP</span>
+                            <div class="periodo">2018 - 2022 (em curso)</div>
+                        </div>
+                    </div>
                 </div>
                 <Footer />
             </body>

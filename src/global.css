@@ -10,6 +10,20 @@ body {
     background-color: #ebebeb !important;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ffca05;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #444243;
+    border-radius: 20px;
+    border: 3px solid #ffca05;
+}
+
 a {
     text-decoration: none !important;
 }
@@ -117,6 +131,7 @@ span, p {
 
 .menu ul li a:hover {
     border-bottom: 3px solid #444243;
+    transition: 0.1s;
 }
 
 .footer {
@@ -208,7 +223,7 @@ span, p {
 }
 
 .container-pers1 {
-    display: inline-block;
+    display: block;
     /* border: 1px solid #000; */
     width: auto;
     padding: 0 100px;
@@ -236,6 +251,7 @@ span, p {
     font-family: 'Open Sans';
     font-weight: bold;
     font-size: 16px;
+    padding: 0;
 }
 
 .container-pers1 .col-pers1 img {
@@ -250,6 +266,12 @@ span, p {
     padding: 0 10px;
     background-color: #ffca05;
     border-radius: 20px;
+}
+
+.container-pers1 .col-pers1 span {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .container-pers2 {
@@ -303,6 +325,7 @@ span, p {
 .form-contato {
     display: block;
     /* border: 1px solid #000; */
+    margin-bottom: 10px;
 }
 
 .form-contato .form-column {
@@ -334,7 +357,8 @@ span, p {
 
 .form-contato .form-row {
     display: inline-block;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    width: 810px;
 }
 
 .form-contato .form-row textarea {
@@ -352,6 +376,11 @@ span, p {
     outline: 0;
 }
 
+.form-contato .form-row span {
+    display: block;
+    text-align: left;
+}
+
 .form-contato .botao-enviar {
     display: inline-block;
     width: 200px;
@@ -363,6 +392,12 @@ span, p {
     background-color: #ffca05;
     border: 1px solid #ffca05;
     border-radius: 20px;
+}
+
+.form-contato .botao-enviar:hover {
+    background-color: #ebebeb;
+    color: #ffca05;
+    transition: 0.2s;
 }
 
 .item-portfolio {

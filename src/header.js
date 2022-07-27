@@ -7,7 +7,7 @@ function Header() {
                 <div class="info">
                     <h1>Caio Moizés</h1>
                     <h2>Engenharia da Computação</h2>
-                    <Link href={ 'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM }><a target="_blank"><span><i class="fa-brands fa-whatsapp"></i> (18) 99752-4254</span></a></Link>
+                    {/* <Link href={ 'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM }><a target="_blank"><span><i class="fa-brands fa-whatsapp"></i> (18) 99752-4254</span></a></Link> */}
                 </div>
             </div>
             <div class="menu">

@@ -1,13 +1,18 @@
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
 import Header from '../src/header';
 import Footer from '../src/footer';
+import Link from 'next/link';
 
 function Contato() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [mensagem, setMensagem] = useState('');
     const [enviado, setEnviado] = useState(false);
+    const [restantes, setRestantes] = useState(255);
+
+    useEffect(() => {
+        setRestantes(255 - mensagem.length);
+    }, [mensagem]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -52,25 +57,29 @@ function Contato() {
                 <div class="container-fluid">
                     <h1>Contato</h1>
                     <div class="container-contato">
-                        <p>Teste de descrição do formulário de contato. Teste de descrição do formulário de contato. 
-                            Teste de descrição do formulário de contato.</p>
+                        <p>Utilize o formulário abaixo para me enviar um e-mail com qualquer dúvida que possua.</p>
                         <form class="form-contato" method="POST">
                             <div class="form-column">
                                 <label for="">Nome</label>
-                                <input type="text" name="nome" id="nome" autoComplete="off" onChange={(e) => {setNome(e.target.value)}} />
+                                <input type="text" name="nome" id="nome" autoComplete="off" maxlength="60" onChange={(e) => {setNome(e.target.value)}} />
                             </div>
                             <div class="form-column">
                                 <label for="email">E-mail</label>
-                                <input type="email" name="email" id="email" autoComplete="off" onChange={(e) => {setEmail(e.target.value)}} />
+                                <input type="email" name="email" id="email" autoComplete="off" maxlength="60" onChange={(e) => {setEmail(e.target.value)}} />
                             </div>
                             <div style={{ clear: 'both' }}></div>
                             <div class="form-row">
                                 <label for="mensagem">Mensagem</label>
-                                <textarea name="mensagem" id="mensagem" autoComplete="off" onChange={(e) => {setMensagem(e.target.value)}}></textarea>
+                                <textarea name="mensagem" id="mensagem" autoComplete="off" maxlength="255" onChange={(e) => {setMensagem(e.target.value)}}></textarea>
+                            </div>
+                            <div style={{ clear: 'both' }}></div>
+                            <div class="form-row">
+                                <span>Restantes: {restantes}</span>
                             </div>
                             <div style={{ clear: 'both' }}></div>
                             <input class="botao-enviar" type="submit" name="enviar" id="enviar" onClick={(e) => {handleSubmit(e)}} value="Enviar" />
                         </form>
+                        <p>Caso preferir, entre em contato via WhatsApp clicando <Link href={ 'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM }><a target="_blank">aqui</a></Link>.</p>
                     </div>
                 </div>
                 <Footer />

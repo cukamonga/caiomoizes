@@ -1,6 +1,8 @@
 import Header from '../src/header';
 import Footer from '../src/footer';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import Modal from '../src/Modal';
 
 function Orcamento() {
     const mensagens = [
@@ -10,8 +12,29 @@ function Orcamento() {
         "Olá, gostaria de fazer um orçamento para Limpeza."
     ];
 
+    const [showModal, setShowModal] = useState(false);
+    const [imgSrc, setImgSrc] = useState('');
+    const [text, setText] = useState();
+    const [overflow, setOverflow] = useState('visible');
+
+    useEffect(() => {
+        if (showModal) {
+            console.log('ON');
+            setOverflow('hidden');
+        } else {
+            console.log('OFF');
+            setOverflow('visible');
+        }
+    }, [showModal]);
+
+    const handleModal = (e, t) => {
+        setImgSrc(e);
+        setText(t);
+        setShowModal(true);
+    };
+
     return (
-        <html>
+        <html style={{ overflow: overflow }}>
             <head>
                 <title>Caio Moizés - Orçamento</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"></link>
@@ -24,6 +47,33 @@ function Orcamento() {
                 <div class="container-fluid">
                     <h1>Orçamento</h1>
                     <div class="container-pers2">
+                        <div class="item-orcamento">
+                            <a href="#">
+                            <img 
+                                src="img/montagem.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        (
+                                            <div>
+                                                Montagem completa do computador (hardware).<br></br>
+                                                <Link href={'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM + '?text=' + mensagens[0]}>
+                                                    <a target="_blank">Clique aqui</a>
+                                                </Link>
+                                            </div>
+                                        )
+                                    )
+                                }}
+                            />
+                            </a>
+                            <Modal show={ showModal } onClose={() => setShowModal(false)}>
+                                <div class="divimg-modal">
+                                    <img src={imgSrc} />
+                                </div>
+                                <div style={{ clear: 'both' }}></div>
+                                {text}
+                            </Modal>
+                        </div>
                         <div class="item-orcamento">
                             <Link href={'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM + '?text=' + mensagens[0]}><a target="_blank"><img src="img/montagem.png" /></a></Link>
                             <h3>Montagem</h3>
