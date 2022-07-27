@@ -23,23 +23,23 @@ function Orcamento() {
                 <Header />
                 <div class="container-fluid">
                     <h1>Orçamento</h1>
-                    <div class="container-orcamento">
-                        <div class="item">
+                    <div class="container-pers2">
+                        <div class="item-orcamento">
                             <Link href={'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM + '?text=' + mensagens[0]}><a target="_blank"><img src="img/montagem.png" /></a></Link>
                             <h3>Montagem</h3>
                             <p>Montagem completa do computador (hardware).</p>
                         </div>
-                        <div class="item">
+                        <div class="item-orcamento">
                             <Link href={'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM + '?text=' + mensagens[1]}><a target="_blank"><img src="img/formatar_full.png" /></a></Link>
                             <h3>Formatação Completa</h3>
                             <p>Formatação do Windows + instalação de programas solicitados.</p>
                         </div>
-                        <div class="item">
+                        <div class="item-orcamento">
                             <Link href={'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM + '?text=' + mensagens[2]}><a target="_blank"><img src="img/formatar_simples.png" /></a></Link>
                             <h3>Formatação Simples</h3>
                             <p>Formatação do Windows.</p>
                         </div>
-                        <div class="item">
+                        <div class="item-orcamento">
                             <Link href={'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM + '?text=' + mensagens[3]}><a target="_blank"><img src="img/limpeza.png" /></a></Link>
                             <h3>Limpeza</h3>
                             <p>Limpeza das peças e componentes (hardware) do computador.</p>

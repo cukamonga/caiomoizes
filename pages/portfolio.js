@@ -1,7 +1,20 @@
 import Header from '../src/header';
 import Footer from '../src/footer';
+import Link from 'next/link';
+import { useState } from 'react';
+import Modal from '../src/Modal';
 
 function Portfolio() {
+    const [showModal, setShowModal] = useState(false);
+    const [imgSrc, setImgSrc] = useState('');
+    const [text, setText] = useState('');
+
+    const handleModal = (e, t) => {
+        setImgSrc(e);
+        setText(t);
+        setShowModal(true);
+    };
+
     return (
         <html>
             <head>
@@ -13,7 +26,111 @@ function Portfolio() {
             </head>
             <body>
                 <Header />
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <h1>Portfólio</h1>
+                    <div class="container-pers2">
+                        <span>
+                            Nesta página estarei mostrando um pouco do que eu sei fazer.
+                            Estou finalizando o curso de Engenharia da Computação e estou aberto para 
+                            oportunidades de freelance nas áreas apresentadas abaixo.
+                        </span>
+                        <div class="item-portfolio">
+                            <img 
+                                src="img/nodejs.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        "Teste de envio de texto por parâmetro."
+                                    )
+                                }}
+                            />
+                            <Modal show={ showModal } onClose={() => setShowModal(false)}>
+                                <div class="divimg-modal">
+                                    <img src={imgSrc} />
+                                </div>
+                                <div style={{ clear: 'both' }}></div>
+                                {text}
+                            </Modal>
+                        </div>
+                        <div class="item-portfolio">
+                            <img 
+                                src="img/react_icon.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        "Teste de envio de texto por parâmetro."
+                                    )
+                                }}
+                            />
+                        </div>
+                        <div class="item-portfolio">
+                            <img 
+                                src="img/php_icon.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        "Teste de envio de texto por parâmetro."
+                                    )
+                                }}
+                            />
+                        </div>
+                        <div class="item-portfolio">
+                            <img 
+                                src="img/html_icon.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        "Teste de envio de texto por parâmetro."
+                                    )
+                                }}
+                            />
+                        </div>
+                        <div class="item-portfolio">
+                            <img 
+                                src="img/css_icon.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        "Teste de envio de texto por parâmetro."
+                                    )
+                                }}
+                            />
+                        </div>
+                        <div class="item-portfolio">
+                            <img 
+                                src="img/js_icon.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        "Teste de envio de texto por parâmetro."
+                                    )
+                                }}
+                            />
+                        </div>
+                        <div class="item-portfolio">
+                            <img 
+                                src="img/cpp_icon.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        "Teste de envio de texto por parâmetro."
+                                    )
+                                }}
+                            />
+                        </div>
+                        <div class="item-portfolio">
+                            <img 
+                                src="img/android_icon.png"
+                                onClick={(e, t) => {
+                                    handleModal(
+                                        e.target.src,
+                                        "Teste de envio de texto por parâmetro."
+                                    )
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
                 <Footer />
             </body>
         </html>

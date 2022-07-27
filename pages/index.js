@@ -24,7 +24,7 @@ function Home() {
                             <p>Meu nome é Caio Moizés Santos, sou estudante do último ano de Engenharia da Computação no UniSALESIANO Araçatuba-SP.</p>
                             <div class="redes">
                                 <Link href={ 'https://wa.me/' + process.env.NEXT_PUBLIC_TELEFONE_NUM }><a target="_blank"><span><i class="fa-brands fa-whatsapp"></i> (18) 99752-4254</span></a></Link>
-                                <a href="#"><span><i class="fa-solid fa-envelope"></i> caiomoizess2014@gmail.com</span></a>
+                                <a href="#"><span><i class="fa-solid fa-envelope"></i> {process.env.NEXT_PUBLIC_EMAIL_ADDRESS}</span></a>
                                 <Link href={ 'https://instagram.com/' + process.env.NEXT_PUBLIC_INSTAGRAM_NICK }><a target="_blank"><span><i class="fa-brands fa-instagram"></i> @{process.env.NEXT_PUBLIC_INSTAGRAM_NICK}</span></a></Link>
                             </div>
                         </div>
@@ -33,11 +33,11 @@ function Home() {
                         <h1>Experiência Profissional</h1>
                         <div style={{clear: 'both' }}></div>
                         <div class="col-pers1">
-                            <h3>Cartório de Registro de Imóveis</h3>
+                            <h3>Cartório de Registro de Imóveis - Valparaíso/SP</h3>
                             <div class="periodo">2020 - 2022</div>
                         </div>
                         <div class="col-pers1">
-                            <h3>Global Websites</h3>
+                            <h3>Global Websites - Araçatuba/SP</h3>
                             <div class="periodo">2019</div>
                         </div>
                     </div>
